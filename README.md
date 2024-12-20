@@ -23,6 +23,7 @@ The domain for this metamodel is a university system. This domain encompasses th
 
 #### Task 4:
 - Two model instances were created by creating dynamic instance from the ecore metamodel (University.xmi and SE4GD.xmi)
+- Same models were also created using the Plugin projects.
 
 #### Task 5:
 ###### Constraints Defined <br>
