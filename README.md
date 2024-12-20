@@ -3,7 +3,7 @@ EMF Assignment for Model Driven Engineering at the University Of L'Aquila.
 
 ### Assignment Tasks
 ##### Task 1: Define the Metamodel
-Objective: Create a metamodel representing your domain using Emfatic or EMF.
+Objective: Create a metamodel representing your domain using Emfatic or EMF. <br>
 Requirements:
     Number of Metaclasses:
         9 for a 2-member group.
