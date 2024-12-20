@@ -1,7 +1,7 @@
 # EMF-Assignment-GROUP8
 EMF Assignment for Model Driven Engineering at the University Of L'Aquila.
 
-### Assignment Tasks
+## Assignment Tasks
 ##### Task 1: Define the Metamodel
 Objective: Create a metamodel representing your domain using Emfatic or EMF. <br>
 Requirements:
@@ -45,3 +45,9 @@ Objective: Use OCL or EVL/EOL to define rules and derived values: <br>
         2 operations (custom logic to be applied to the model, e.g., calculations or transformations).
     - Derived Fields (for OCL):
         2 fields derived dynamically based on other model attributes.
+
+## Domain of Choice
+The domain for this metamodel is a university system. This domain encompasses the organizational, academic, and administrative aspects involved in the functioning of a university. The metamodel is designed to represent key entities within a university, such as students, staff, departments, academic programs, and physical infrastructure, along with their relationships and attributes.
+
+
+
