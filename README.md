@@ -1,15 +1,6 @@
 # EMF-Assignment-GROUP8
 EMF Assignment for Model Driven Engineering at the University Of L'Aquila.
 
-##### Task 5: Define OCL/EVL Constraints, Operations, and Derived Fields <br>
-Objective: Use OCL or EVL/EOL to define rules and derived values: <br>
-    - Constraints:
-        3 constraints to validate the models (e.g., ensuring uniqueness, attribute ranges, or logical consistency).
-    - Operations:
-        2 operations (custom logic to be applied to the model, e.g., calculations or transformations).
-    - Derived Fields (for OCL):
-        2 fields derived dynamically based on other model attributes.
-
 ## Domain of Choice
 The domain for this metamodel is a university system. This domain encompasses the organizational, academic, and administrative aspects involved in the functioning of a university. The metamodel is designed to represent key entities within a university, such as students, staff, departments, academic programs, and physical infrastructure, along with their relationships and attributes.
 
