@@ -1,42 +1,6 @@
 # EMF-Assignment-GROUP8
 EMF Assignment for Model Driven Engineering at the University Of L'Aquila.
 
-## Assignment Tasks
-##### Task 1: Define the Metamodel
-Objective: Create a metamodel representing your domain using Emfatic or EMF. <br>
-Requirements:
-    Number of Metaclasses:
-        9 for a 2-member group.
-        12 for a 3-member group.
-    Must include:
-        Inheritance (e.g., subclasses).
-        Relationships:
-            Containment (e.g., parent-child structures).
-            Non-containment.
-            Opposites (optional).
-        Enumeration types and attributes for diversity.
-        Each metaclass must have:
-            At least one attribute or reference.
-            No isolated or singleton metaclasses.
-
-##### Task 2: Generate APIs and Plugins
-Objective: Use the metamodel to create a genmodel file and generate the following:
-- Java APIs for the model.
-- dit and editor plugin projects for interacting with the model.
-
-##### Task 3: Implement Plugin Functionalities
-Objective: Develop a plugin project to manage the model. Include these functionalities: <br>
-- Create: Allow users to define new instances based on the metamodel.
-- Serialize: Save the models to a persistent format (e.g., XML, XMI).
-- Load: Retrieve serialized models.
-- Validate: Check the models against constraints defined in the metamodel.
-
-##### Task 4: Instantiate the Metamodel
-Objective: Create two concrete model instances based on the metamodel. <br>
-Ensure that:
-        - Every concept (metaclass) in the metamodel is instantiated.
-        - The models reflect the relationships, constraints, and structure defined in Task 1.
-
 ##### Task 5: Define OCL/EVL Constraints, Operations, and Derived Fields <br>
 Objective: Use OCL or EVL/EOL to define rules and derived values: <br>
     - Constraints:
@@ -48,6 +12,44 @@ Objective: Use OCL or EVL/EOL to define rules and derived values: <br>
 
 ## Domain of Choice
 The domain for this metamodel is a university system. This domain encompasses the organizational, academic, and administrative aspects involved in the functioning of a university. The metamodel is designed to represent key entities within a university, such as students, staff, departments, academic programs, and physical infrastructure, along with their relationships and attributes.
+
+## Task Completion Checklist
+##### Task 1:
+- The metamodel defined as an ecore project (universityModelingProject/model/UniversitySystem.ecore) and contained 15 meta classes, 2 of which are abstract. <br>
+- It includes 12  classes inheriting from NamedEntity class, Academic Department and Proffesor inheriting from Department and Staff respectively
+- It includes 7 containement relationship and about 10 non-containment relationship with about 7 defined as opposite relationship.
+- Three enumeration types are defined (programme type, gender and role)
+- All metaclass has either or all of attributes and references.
+
+#### Task 2:
+- Gen file (universityModelingProject/model/UniversitySystem.genmodel) was generated from the metamodel.
+- Java API for the model was generated (UniversityModelingProject/src)
+- The edit and editor plugin projects for interacting with the model was also created.
+
+#### Task 3:
+- Plugin project was developed (UniversityModelingPlugin) which was used to instance two models (ModelA_UnivaqModel and ModelB_SE4GDModel
+- In each of the plugin instance model, the create, serialize, load and validate methods are defined.
+
+#### Task 4:
+- Two model instances were created by creating dynamic instance from the ecore metamodel (University.xmi and SE4GD.xmi)
+
+#### Task 5:
+###### Constraints Defined <br>
+- MustHaveCampus : University must have atleast one campus
+- AtleastOneProgramme - An academic department must contain atleast one programme
+- NoOverlappingCoursesInLectureHall - This ensures that no lectures are clashing in the same hall
+- LimitStudentsFromSameCountryInMobilityProgrammes - Checks if a programme is a mobility programe, if true, then ensures that no country has more than three students in same programe
+
+###### Operations Defined <br>
+- TeachesCourse - Checks if a proffessor teaches a course
+- isGenderBalanced - Returns true if both male and female are atleast 30% of the entire student population else false
+
+###### Derived Fields <br>
+- attribute NumberOfMaleStaff - Counts number of male staff in a department
+- attribute NumberOfFemaleStaff - Counts number of female staff in a department
+- attribute AverageStudentsPerCourse - Average number of students registered per course in a programme.
+
+
 
 
 
